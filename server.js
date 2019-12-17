@@ -15,9 +15,11 @@ connection.once('open', () => {
 })
 const projectsRouter = require('./routes/projects');
 const bugsRouter = require('./routes/bugs');
+const usersRouter = require('./routes/users');
 
 app.use('/projects', projectsRouter);
 app.use('/bugs', bugsRouter);
+app.use('users', usersRouter);
 app.listen(port,() => {
     console.log('Server is running');
 });
